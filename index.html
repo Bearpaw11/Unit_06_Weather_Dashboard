@@ -27,39 +27,78 @@
         <h1>Weather Dashboard</h1>
     </nav>
     <div class="jumbotron">
-            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static">
-                            <div class="container">
-                                    <form class="form-inline my-2 my-lg-0">
-                                            <input class="form-control mr-sm-2 city" type="text" placeholder="Enter a city" aria-label="Search">
-                                            <button class="btn btn-outline-success my-2 my-sm-0 getWeather" type="submit">Search</button>
-                                          </form>
-                                <ul class="list-group lgWidth">
-                                    <h5> Recent Searches:</h3>
-                                        <li class="list-group-item">Cras justo odio</li>
-                                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                                        <li class="list-group-item">Morbi leo risus</li>
-                                        <li class="list-group-item">Porta ac consectetur ac</li>
-                                        <li class="list-group-item">Vestibulum at eros</li>
-                                </ul>
-                                
-                            </div>
-                    </div>
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <br>
-                            <h3><strong class="d-inline-block mb-2 text-primary">Current Weather Conditions</strong></h3>
-                            <br>
-                            <h3 class="mb-0 city"></h3>
-                            <h4 class="mb-0 currentDate"></h4>
-                            <div id="icon"><img id="wicon" src="" alt=></div>
-                            <h4 class="mb-0 temp"></h4>
-                            <h4 class="mb-0 humidity"></h4>
-                            <h4 class="mb-0 windSpeed"></h4>
-                            <h4 class="mb-0 uvIndex"></h4>
-                          </div>
-                  </div>
+        <div
+            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <div class="container">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2 city" type="text" placeholder="Enter a city"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0 getWeather" type="submit">Search</button>
+                    </form>
+                    <ul class="list-group lgWidth">
+                        <h5> Recent Searches:</h3>
+                            <li class="list-group-item">Cras justo odio</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Morbi leo risus</li>
+                            <li class="list-group-item">Porta ac consectetur ac</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
 
-        
+                </div>
+            </div>
+            <div class="col p-4 d-flex flex-column position-static">
+                <br>
+                <h3><strong class="d-inline-block mb-2 text-primary">Current Weather Conditions</strong></h3>
+                <br>
+                <h3 class="mb-0 city"></h3>
+                <h4 class="mb-0 currentDate"></h4>
+                <div id="icon"><img id="wicon" src="" alt=></div>
+                <h4 class="mb-0 temp"></h4>
+                <h4 class="mb-0 humidity"></h4>
+                <h4 class="mb-0 windSpeed"></h4>
+                <h4 class="mb-0 uvIndex"></h4>
+            </div>
+        </div>
+        <h3 class="fiveDay"><strong class="d-inline-block mb-2 text-primary">5-day Forcast</strong></h3>
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
 
