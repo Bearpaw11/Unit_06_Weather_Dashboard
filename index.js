@@ -1,4 +1,4 @@
- const apiKey = "7ba67ac190f85fdba2e2dc6b9d32e93c"
+ const apiKey = "893c6340b3ebe569233d6eaa2bb7981b"
 
  $(document).ready(function() {
    
@@ -29,11 +29,9 @@ $(".getWeather").on("click", function(event) {
           $(".humidity").text("Humidity: " + response.main.humidity);
           var lat = response.coord.lat
           var lon = response.coord.lon  
-          // console.log (lonLat)
-          // var time = response.clouds.dt 
-          // console.log (time)
-          var uvIndexQuery= "https://api.openweathermap.org/data/2.5/uvi?&appid=7ba67ac190f85fdba2e2dc6b9d32e93c&lat=" + lat + "&lon=" + lon 
-         //  uvIndexQuery =  "http://api.openweathermap.org/data/2.5/uvi?appid=7ba67ac190f85fdba2e2dc6b9d32e93c&lat=33.45&lon=-112.08"
+
+          var uvIndexQuery= "https://api.openweathermap.org/data/2.5/uvi?&appid=893c6340b3ebe569233d6eaa2bb7981b&lat=" + lat + "&lon=" + lon 
+         
 
           console.log(uvIndexQuery)
           $.ajax({
@@ -46,7 +44,7 @@ $(".getWeather").on("click", function(event) {
         
 
         });
-        var url = 'http://api.openweathermap.org/data/2.5/forecast?q=' + cityWeather + '&appid=7ba67ac190f85fdba2e2dc6b9d32e93c&units=imperial'
+        var url = 'http://api.openweathermap.org/data/2.5/forecast?q=' + cityWeather + '&appid=893c6340b3ebe569233d6eaa2bb7981b&units=imperial'
         $.ajax({
           url: url,
           method: "GET"
