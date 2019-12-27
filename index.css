@@ -8,10 +8,13 @@
     width: 75px;
 }
 
-.card {
-    width: 150px;
-    height: 150px;
+.icon2 {
+    height: 75px;
+    width: 75px;
 }
+
+
+
 
 .fiveDay {
     text-align: center;
@@ -22,20 +25,15 @@ justify-content: center;
   flex-direction: row;
 }
 
-@media  (max-width: 1000px) {
-    .card {
-        width: 90px;
-        height: 90px;
-        
-    }
-    
-
-  }
+.all{
+    text-align: center;
+  padding-bottom: 10px;
+}
 
   @media  (max-width: 600px) {
     .lgWidth{
         width: 150px;
         padding-top: 20px;
     }
-
   }
+  
