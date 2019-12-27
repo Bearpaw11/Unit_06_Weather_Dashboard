@@ -44,7 +44,7 @@ $(".getWeather").on("click", function(event) {
         
 
         });
-        var url = 'http://api.openweathermap.org/data/2.5/forecast?q=' + cityWeather + '&appid=893c6340b3ebe569233d6eaa2bb7981b&units=imperial'
+        var url = 'https://api.openweathermap.org/data/2.5/forecast?q=' + cityWeather + '&appid=893c6340b3ebe569233d6eaa2bb7981b&units=imperial'
         $.ajax({
           url: url,
           method: "GET"
