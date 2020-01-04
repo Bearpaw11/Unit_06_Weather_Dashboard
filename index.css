@@ -13,7 +13,10 @@
     width: 75px;
 }
 
-
+.topcities {
+  text-decoration: underline;
+  text-align: center;
+}
 
 
 .fiveDay {

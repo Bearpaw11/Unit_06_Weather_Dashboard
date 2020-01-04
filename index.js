@@ -1,7 +1,19 @@
  const apiKey = "893c6340b3ebe569233d6eaa2bb7981b"
 
  $(document).ready(function() {
-   
+  
+  var search = []
+  var storage = localStorage.getItem("city")
+  console.log(storage)
+  if (storage){
+    search = JSON.parse(storage)
+  }
+  renderside()
+  searchcity(search[search.length -1])
+  
+
+
+
 $(".getWeather").on("click", function(event) {
 
         event.preventDefault();
@@ -9,8 +21,13 @@ $(".getWeather").on("click", function(event) {
         $(".currentDate").text(NowMoment.format("MMMM Do YYYY, h:mm a"));
         
         const cityWeather = $(".city").val();
-
+        console.log("--->", search.indexOf(cityWeather))
+   
+      
         
+        searchcity(cityWeather)
+})
+function searchcity(cityWeather){
         const queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
         "q=" + cityWeather + ",Burundi&units=imperial&appid=" + apiKey;
        
@@ -19,14 +36,22 @@ $(".getWeather").on("click", function(event) {
           url: queryURL,
           method: "GET"
         }).then(function(response) {
-          console.log (response)
+       
+
+          if(search.indexOf(cityWeather) === -1){
+            search.push(cityWeather)
+            renderside()
+
+            
+            localStorage.setItem("city", JSON.stringify(search))
+        }
           $(".city").html("<h2>" + response.name + " Weather</h2>");
           var iconcode = response.weather[0].icon;
           var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
           $('#wicon').attr('src', iconurl);
           $(".temp").text("Temperature (F): " + response.main.temp);
-          $(".windSpeed").text("Wind Speed: " + response.wind.speed + " MPH");
-          $(".humidity").text("Humidity: " + response.main.humidity);
+          $(".windSpeed").text("Wind Speed (MPH): " + response.wind.speed);
+          $(".humidity").text("Humidity (%): " + response.main.humidity);
           var lat = response.coord.lat
           var lon = response.coord.lon  
 
@@ -49,6 +74,7 @@ $(".getWeather").on("click", function(event) {
           url: url,
           method: "GET"
         }).then(function(response) {
+          $( "#forecast" ).empty();
           console.log (response)
           for (let i=0; i< response.list.length; i++){
           if (response.list[i].dt_txt.indexOf("12:00:00") !== -1 ){
@@ -59,16 +85,13 @@ $(".getWeather").on("click", function(event) {
            <div class="card-body">
            <h5 class="card-title">${response.list[i].dt_txt.split(" ")[0]}</h5>
                 <img src=${"http://openweathermap.org/img/w/" + iconcode + ".png"} class="icon2" alt="...">
-             
-                  <h5 class="card-title">Temp (F): ${response.list[i].main.temp}</h5>
-           
-                  <h5 class="card-title">Humidity: ${response.list[i].main.humidity}</h5>
-              
+                  <h6 class="card-title"> Temp (F): ${response.list[i].main.temp}</h6>
+                  <h6 class="card-title"> Humidity (%): ${response.list[i].main.humidity} </h6>
                 </div>
               </div>
               </div>`
 
-              $('#forcast').append(card)
+              $('#forecast').append(card)
           }
 
           }
@@ -76,8 +99,24 @@ $(".getWeather").on("click", function(event) {
           
         })
 
-      });
+      };
 
      
+function renderside(){
+ 
+  let max = search.length > 5 ? 5 : search.length;
+  $("#list").empty()
+  let j=0
+  for (let i=search.length -1; j<max; i--){
+  $("#list").append(`<li class="list-group-item topcities" city=${search[i]}>${search[i]}</li>`)
+  j++
+  }
+  $(".topcities").on("click", function(){
+    let cityWeather = $(this).attr("city")
+    searchcity(cityWeather)
+
+  })
+}
+
     });
 
