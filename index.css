@@ -3,6 +3,10 @@
     padding-top: 20px;
 }
 
+.title{
+  color: blue;
+}
+
 #wicon {
     height: 75px;
     width: 75px;

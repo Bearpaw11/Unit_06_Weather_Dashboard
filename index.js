@@ -108,13 +108,6 @@
 
          let max = search.length > 5 ? 5 : search.length;
 
-        //  var max;
-        //  if (search.length > 5){
-        //    max = 5
-        //  }
-        //  else{
-        //    max = search.length
-        //  }
          $("#list").empty()
          let j = 0
          for (let i = search.length - 1; j < max; i--) {
