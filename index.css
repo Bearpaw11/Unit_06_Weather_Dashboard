@@ -4,8 +4,9 @@
 }
 
 .title{
-  color: blue;
-  font-family: monospace
+  color:darkgray;
+  font-family: monospace;
+  font-size: 500%
 }
 
 #wicon {
