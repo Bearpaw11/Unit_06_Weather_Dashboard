@@ -45,5 +45,15 @@ justify-content: center;
         width: 150px;
         padding-top: 20px;
     }
+
+    .title{
+      font-size: 200%
+    }
   }
   
+  @media  (max-width: 850px) {
+    
+    .title{
+      font-size: 300%
+    }
+  }
