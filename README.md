@@ -9,4 +9,5 @@ The last searched city loads when the page is loaded.
 This page was built using the mobile first approach
 
 The app is deployed at https://bearpaw11.github.io/Unit_06_Weather_Dashboard/
+
 Here is a link to the github https://github.com/Bearpaw11/Unit_06_Weather_Dashboard
