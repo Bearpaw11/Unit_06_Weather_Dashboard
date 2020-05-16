@@ -8,4 +8,5 @@ The five most recent cities are saved in local stoarge and shown on the page. Yo
 The last searched city loads when the page is loaded.
 This page was built using the mobile first approach
 
-The app is deplyed at https://bearpaw11.github.io/Unit_06_Weather_Dashboard/
+The app is deployed at https://bearpaw11.github.io/Unit_06_Weather_Dashboard/
+Here is a link to the github https://github.com/Bearpaw11/Unit_06_Weather_Dashboard
