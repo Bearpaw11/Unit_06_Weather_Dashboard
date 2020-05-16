@@ -7,3 +7,5 @@ Enter a city in the search box and the current weather pops up and also a 5 day 
 The five most recent cities are saved in local stoarge and shown on the page. You can click on any of these cites to bring up their weather.
 The last searched city loads when the page is loaded.
 This page was built using the mobile first approach
+
+The app is deplyed at https://bearpaw11.github.io/Unit_06_Weather_Dashboard/
