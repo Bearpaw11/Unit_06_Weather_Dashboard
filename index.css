@@ -6,7 +6,9 @@
 .title{
   color:darkgray;
   font-family: monospace;
-  font-size: 500%
+  font-size: 500%;
+  text-decoration: underline;
+  
 }
 
 #wicon {
